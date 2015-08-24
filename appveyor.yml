@@ -1,7 +1,8 @@
 configuration: Release
 
 before_build:
-  - src\.nuget\NuGet.exe restore src\SimpleMvcSitemap.sln
+  - nuget restore src\SimpleMvcSitemap.sln
+  - nuget restore src\.nuget\packages.config
 
 build:
   project: src\SimpleMvcSitemap.sln       
